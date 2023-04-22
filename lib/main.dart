@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:hungry_busters/screens/homeScreen/homeScreen.dart';
+import 'package:hungry_busters/widgets/root/root.dart';
 
 import 'screens/loginScreen/loginScreen.dart';
 
@@ -36,7 +37,7 @@ class Splash extends StatelessWidget {
     Future.delayed(const Duration(seconds: 1), () 
     {
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (_) => Home(),
+        context, MaterialPageRoute(builder: (_) => Root(),
         )
       );
     }
