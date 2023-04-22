@@ -15,3 +15,8 @@ const smallTextStyle = TextStyle(
   fontSize: 15.0,
   color: Color(0xFF6D6C6C),
 );
+
+const foodTextStyle = TextStyle(
+  fontSize: 22.0,
+  color: Color.fromARGB(255, 81, 81, 81),
+);

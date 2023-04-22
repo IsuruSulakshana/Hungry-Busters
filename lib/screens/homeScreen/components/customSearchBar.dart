@@ -16,7 +16,7 @@ class _CustomSearchState extends State<CustomSearch> {
       padding: const EdgeInsets.symmetric(horizontal: 10.0),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.grey,
+          color: Color.fromARGB(255, 203, 200, 200),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Row(

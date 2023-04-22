@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_busters/themes/textStyle.dart';
 
 class FoodCard extends StatefulWidget {
   final String foodName;
@@ -38,10 +39,95 @@ class _FoodCardState extends State<FoodCard> {
         blurRadius: 5,
         offset: Offset(0, 3),
       ),
-    ],
-  ),
-),
-
+      ],
+     ),
+     child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+            height: 100.0,
+            width: 150.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              image: DecorationImage(
+                image: AssetImage(widget.imageUrl),
+                fit: BoxFit.cover,
+            ),
+          ),
+        ),
+        Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.foodName,
+                      style: commonTextStyle,
+                    ),
+                    IconButton(
+                      icon: Icon(
+                        Icons.favorite_outline,
+                        size: 20.0,
+                        color: isFavorite? Colors.yellow:Colors.grey,
+                      ),
+                      onPressed: (){
+                        setState(() {
+                          isFavorite != isFavorite;
+                        });
+                      },
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 5.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: const [
+                    Icon(Icons.star,size: 20.0,color: Colors.orange,),
+                    Icon(Icons.star,size: 20.0,color: Colors.orange,),
+                    Icon(Icons.star,size: 20.0,color: Colors.orange,),
+                    Icon(Icons.star,size: 20.0,color: Colors.orange,),
+                    Icon(Icons.star,size: 20.0,color: Colors.orange,),
+                    Text(
+                      "4.5",
+                      style: commonTextStyle,
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 7.0, right: 7.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      widget.foodType,
+                      style: const TextStyle(
+                        fontSize: 10.0,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Text(
+                      '${widget.price}LKR',
+                      style: TextStyle(
+                        color: Colors.orange,
+                        fontSize: 15.0
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+     ),
+    ),
     );
   }
 }
