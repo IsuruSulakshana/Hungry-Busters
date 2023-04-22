@@ -34,10 +34,10 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Wait for 5 seconds and navigate to the login screen
-    Future.delayed(const Duration(seconds: 1), () 
+    Future.delayed(const Duration(seconds: 2), () 
     {
       Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (_) => Root(),
+        context, MaterialPageRoute(builder: (_) => const Login(),
         )
       );
     }

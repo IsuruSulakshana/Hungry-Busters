@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hungry_busters/screens/loginScreen/components/loginInput.dart';
 import 'package:hungry_busters/widgets/colorButton/colorButton.dart';
+import 'package:hungry_busters/widgets/root/root.dart';
 import 'package:hungry_busters/widgets/simpleCustomWidget/simpleCustomWidget.dart';
 
 class Login extends StatefulWidget {
@@ -39,7 +40,12 @@ class _LoginState extends State<Login> {
                 MyFormWidget(),
                 const SizedBox(height: 20.0,),
                 ColorButton(
-                  function: (){}, 
+                  function: (){
+                    Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Root()),
+                    );
+                  }, 
                   text: "Sign In",
                 ),
                 const SizedBox(height: 10.0,),
