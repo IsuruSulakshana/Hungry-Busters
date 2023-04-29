@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:hungry_busters/screens/homeScreen/homeScreen.dart';
+import 'package:hungry_busters/screens/menuScreen/menuScreen.dart';
 import 'package:hungry_busters/widgets/root/root.dart';
 
 import 'screens/loginScreen/loginScreen.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
-      home: const Splash(),
+      home: const Home(),
     );
   }
 }
@@ -55,4 +56,3 @@ class Splash extends StatelessWidget {
     );
   }
 }
-

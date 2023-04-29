@@ -45,18 +45,8 @@ class _FoodCardState extends State<FoodCard> {
      child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(
-            height: 100.0,
-            width: 150.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(15.0),
-              image: DecorationImage(
-                image: AssetImage(widget.imageUrl),
-                fit: BoxFit.cover,
-            ),
-          ),
-          child: RaisedButton(
-            onPressed: (){
+        GestureDetector(
+            onTap: (){
               Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Menu(
@@ -67,9 +57,17 @@ class _FoodCardState extends State<FoodCard> {
 
                 )),
               );
-            }
+            }, child: Container(
+            height: 100.0,
+            width: 150.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+              image: DecorationImage(
+                image: AssetImage(widget.imageUrl),
+                fit: BoxFit.cover,
+            ),
+          ),),
           ),
-        ),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
