@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hungry_busters/screens/menuScreen/menuScreen.dart';
 import 'package:hungry_busters/themes/textStyle.dart';
 
 class FoodCard extends StatefulWidget {
@@ -53,6 +54,20 @@ class _FoodCardState extends State<FoodCard> {
                 image: AssetImage(widget.imageUrl),
                 fit: BoxFit.cover,
             ),
+          ),
+          child: RaisedButton(
+            onPressed: (){
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Menu(
+                foodName: widget.foodName, 
+                imageUrl: widget.imageUrl, 
+                foodType: widget.foodType, 
+                price: widget.price,
+
+                )),
+              );
+            }
           ),
         ),
         Expanded(

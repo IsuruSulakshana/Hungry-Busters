@@ -10,5 +10,5 @@ final List<Food> foods = [
     Food(name: 'Sushi Roll', imageUrl: "asset/images/buger.png", price: 14.99, type: 'Japanese'),
     Food(name: 'Spaghetti', imageUrl: "asset/images/buger.png", price: 11.99, type: 'Italian'),
     Food(name: 'Pho', imageUrl: "asset/images/buger.png", price: 9.99, type: 'Vietnamese'),
-    Food(name: 'Chicken Tikka Masala', imageUrl: "asset/images/buger.png", price: 13.99, type: 'Indian'),
+    Food(name: 'Masala', imageUrl: "asset/images/buger.png", price: 13.99, type: 'Indian'),
   ];
